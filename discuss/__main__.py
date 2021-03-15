@@ -1,16 +1,10 @@
 """The Main Application of The Discussion Forum
 -----------------------------
 
-Project structure
------------------
-*discuss/*
-    **__main__.py**:
-        The Main Application of The Discussion Forum
-
 About this Module
 ------------------
-This module is the main entry point of The Main Application of The Discussion Forum.
-
+This module is the main entry point of The Main Application of The Discussion
+Forum.
 """
 
 __author__ = "Benoit Lapointe"
