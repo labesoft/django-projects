@@ -31,7 +31,7 @@ To implement this project we need to know the following:
 
 ## Project Plan
 
-- [ ] Create the project and web app
+- [x] Create the project and web app
 - [ ] Create models
 - [ ] Write forms
 - [ ] Write admin site
