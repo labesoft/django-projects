@@ -40,3 +40,4 @@ To implement this app we will use :
 - [ ] Develop the Templates
 - [ ] Outsource password functionality
 - [ ] Write unit tests
+- [ ] [Deploy to a docker image](https://blog.logrocket.com/dockerizing-a-django-app/)
