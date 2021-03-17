@@ -1,6 +1,6 @@
 # Discuss - A Discussion Forum Web App
 
-![img.png](img.png)
+![image](https://user-images.githubusercontent.com/11091581/111494627-0271af80-8715-11eb-87ec-7a26ef394ee3.png)
 
 Discussion Forum is a place (a website) that enables people to post views 
 over a certain topic publicly and also allows to see other’s opinions on 
