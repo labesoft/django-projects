@@ -24,7 +24,7 @@ from .models import *
 class CreateInForum(ModelForm):
     """The form which creates a new forum"""
     class Meta:
-        model = forum
+        model = Forum
         fields = "__all__"
 
 

@@ -18,10 +18,10 @@ __copyright__ = "Copyright 2021, labesoft"
 __version__ = "1.0.0"
 
 from django.db import models
+from django.utils.text import slugify
 
 
-# parent model
-class forum(models.Model):
+class Forum(models.Model):
     """The class Forum define the fields we want here
 
     Usually Django fields are mandatory, to change this default behavior of
@@ -31,8 +31,12 @@ class forum(models.Model):
     email = models.CharField(max_length=200, null=True)
     topic = models.CharField(max_length=300)
     description = models.CharField(max_length=1000, blank=True)
-    link = models.CharField(max_length=100, null=True)
+    link = models.SlugField(max_length=100, null=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
+
+    def save(self, *args, **kwargs):
+        self.link = slugify(self.link)
+        super(Forum, self).save(*args, **kwargs)
 
     def __str__(self):
         """This will return the string representation of the object.
@@ -42,7 +46,6 @@ class forum(models.Model):
         return str(self.topic)
 
 
-# child model
 class Discussion(models.Model):
     """The child of forum that stores views from different users.
 
@@ -53,7 +56,7 @@ class Discussion(models.Model):
        in maintaining a record of which opinion belongs to which forum.
     - Discuss – It actually stores the opinion
     """
-    forum = models.ForeignKey(forum, blank=True, on_delete=models.CASCADE)
+    forum = models.ForeignKey(Forum, blank=True, on_delete=models.CASCADE)
     discuss = models.CharField(max_length=1000)
 
     def __str__(self):

@@ -38,3 +38,4 @@ To implement this project we need to know the following:
 - [x] Configure urls
 - [x] Write views
 - [x] Write templates
+- [x] Add unit tests

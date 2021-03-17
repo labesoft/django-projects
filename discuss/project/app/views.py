@@ -13,76 +13,105 @@ __copyright__ = "Copyright 2021, labesoft"
 __version__ = "1.0.0"
 
 from django.shortcuts import render, redirect
-from .models import *
 from .forms import *
 
 
 def home(request):
-    """The home page that takes all forums and discussion objects
-
-    It then passes them to the templates through a dictionary named context.
-    This page links to both the other pages and shows all the required
-    information to the user with the feature of adding more information in
-    any forum.
+    """Renders the home page that sends all forums to home template.
 
     :param request: the request received when home loads
-    :return: the rendered response with the context
+    :return: the rendered response
     """
-    forums = forum.objects.all()
+    forums = Forum.objects.all()
+    context = generate_card_context(forums)
+    return render(request, "home.html", context=context)
+
+
+def details(request, slug):
+    """Renders the details page that sends the selected forum details template
+
+    :param request: the request received when home loads
+    :param slug: the link slug to send the response
+    :return: the rendered response
+    """
+    forums = Forum.objects.filter(link=slug)
+    context = generate_card_context(forums)
+    return render(request, 'details.html', context=context)
+
+
+def generate_card_context(forums):
+    """Generates the context of card views
+
+    Its response is based on the forum list provided and generates the context
+    required for the rendering of the html page.
+
+    :param forums: the forums to include in each cards
+    :return: the card context of the forum list
+    """
     count = forums.count()
     discussions = []
     for i in forums:
         discussions.append(i.discussion_set.all())
-
     context = {'forums': forums,
                'count': count,
                'discussions': discussions}
-    return render(request, 'home.html', context)
+    return context
 
 
-def details(request, slug):
-    forums = [forum.objects.get(link=slug)]
-    discussions = [forums[0].discussion_set.all()]
-    context = {'forums': forums,
-               'count': 1,
-               'discussions': discussions}
-    return render(request, 'home.html', context)
+def add_in_forum(request):
+    """Creates a new forum through an instance of CreateInForum
 
-
-def addInForum(request):
-    """Creates a new forum through an instance of CreateInForum() object
-
-    It was defined in forms.py and also, it takes the filled data through
-    request.POST and checks if the data is valid to save it in our database
-    and after successfully storing it redirects to the home page otherwise it
-    again asks user to fill the correct information
+    If there is a context it means that the forum could not be generated
+    because it was not valid, we then go back to adding the forum so the user
+    can correct his answer. Otherwise the forum was created and we go back to
+    home page.
 
     :param request: the POST request received with the forum data
     :return: the rendered response with the context
     """
-    form = CreateInForum()
-    if request.method == 'POST':
-        form = CreateInForum(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/')
-    context = {'form': form}
-    return render(request, 'addInForum.html', context)
+    context = generate_addin_context(request, CreateInForum)
+    if context:
+        return render(request, 'addInForum.html', context)
+    else:
+        return redirect('/')
 
 
-def addInDiscussion(request):
-    """This is very similar to add in forum, but add new discussions
+def add_in_discussion(request):
+    """Creates a new discussion through an instance of CreateInDiscussion
 
-    The used is then to add opinions to existing forums.
+    If there is a context it means that the discussion could not be generated
+    because it was not valid, we then go back to adding the forum so the user
+    can correct his answer. Otherwise the forum was created and we go back to
+    home page.
 
     :param request: the POST request received with the discussion data
     :return: the rendered response with the context
     """
-    form = CreateInDiscussion()
+    context = generate_addin_context(request, CreateInDiscussion)
+    if context:
+        return render(request, 'addInDiscussion.html', context)
+    else:
+        return redirect('/')
+
+
+def generate_addin_context(request, create_class):
+    """Generates an empty context on successful class creation and save the form
+
+    When it fails, it generates a context to inform the user why the creation
+    failed.
+
+    :param request: the post request provided
+    :param create_class: the form fields to validate
+    :return: an empty context on valid submission,
+                otherwise a context with the form
+    """
+    form = create_class()
     if request.method == 'POST':
-        form = CreateInDiscussion(request.POST)
+        form = create_class(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return {}
     context = {'form': form}
-    return render(request, 'addInDiscussion.html', context)
+    return context
+
+

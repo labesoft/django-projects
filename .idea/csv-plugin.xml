@@ -17,10 +17,24 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\discuss\project\app\models.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\discuss\project\app\templates\home.html">
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\discuss\project\app\tests.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>

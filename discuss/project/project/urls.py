@@ -20,7 +20,7 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('<slug:slug>', views.details, name='details'),
-    path('addInForum/', views.addInForum, name='addInForum'),
-    path('addInDiscussion/', views.addInDiscussion, name='addInDiscussion'),
+    path('addInForum/', views.add_in_forum, name='addInForum'),
+    path('addInDiscussion/', views.add_in_discussion, name='addInDiscussion'),
+    path('<slug:slug>/', views.details, name='details')
 ]
