@@ -6,7 +6,7 @@ There is no better way to learn Django or any other framework than by working on
 
 ## Our 4 first Demo projects
 
-- [ ] [Calorie Calculator]()
+- [ ] [Calorie Calculator](calor)
 - [x] [Discussion Forum](discuss)
-- [ ] [News Aggregator Web App]()
-- [ ] [Online Job Portal]()
+- [ ] [News Aggregator Web App](aggnews)
+- [ ] [Online Job Portal](jopro)
