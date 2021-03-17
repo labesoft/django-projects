@@ -11,6 +11,8 @@ Package structure
         The auth decorators of The Calorie Calculator Web Application
     **filters.py**:
         The search filters of The Calorie Calculator Web Application
+    **forms.py**:
+        The forms of The Calorie Calculator Web App
     **models.py**:
         The Model of the Calorie Calculator Web Application
 """
