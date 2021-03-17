@@ -6,6 +6,9 @@ Package structure
 *calor/*
     **__init__.py**:
         The package of the Calorie Calculator
+*calor/project/app/*
+    **models.py**:
+        The Model of the Calorie Calculator Web Application
 """
 
 __author__ = "Benoit Lapointe"

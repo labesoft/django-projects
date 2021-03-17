@@ -15,7 +15,8 @@ guidelines for gaining or losing weight.
 
 This python project will be developed using a python Django. Django 
 framework provides inbuilt libraries for web development. We can develop any 
-kind of web app using Django.
+kind of web app using Django. The project is also deployed through a Docker 
+package which is a tryout at this point.
 
 ## Prerequisite
 
@@ -29,8 +30,8 @@ To implement this app we will use :
 
 ## Project Plan
 
-- [ ] Create launch config (init, runserver, test)
-- [ ] Write models
+- [x] Create launch config (init, runserver, test)
+- [x] Write models
 - [ ] Write Authentication module
 - [ ] Write a search feature
 - [ ] Create and update the models
