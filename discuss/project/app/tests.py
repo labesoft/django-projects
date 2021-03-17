@@ -15,7 +15,7 @@ __version__ = "1.0.0"
 from django.test import TestCase
 from django.urls import reverse
 
-from app.models import Forum, Discussion
+from .models import Forum, Discussion
 
 
 def create_forum(name):

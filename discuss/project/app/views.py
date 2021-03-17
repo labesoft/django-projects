@@ -8,11 +8,12 @@ Forum.
 """
 
 __author__ = "Benoit Lapointe"
-__date__   = "2021-03-15"
+__date__ = "2021-03-15"
 __copyright__ = "Copyright 2021, labesoft"
 __version__ = "1.0.0"
 
 from django.shortcuts import render, redirect
+
 from .forms import *
 
 
@@ -113,5 +114,3 @@ def generate_addin_context(request, create_class):
             return {}
     context = {'form': form}
     return context
-
-
