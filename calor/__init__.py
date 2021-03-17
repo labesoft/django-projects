@@ -7,6 +7,8 @@ Package structure
     **__init__.py**:
         The package of the Calorie Calculator
 *calor/project/app/*
+    **decorators.py**:
+        The auth decorators of The Calorie Calculator Web Application
     **models.py**:
         The Model of the Calorie Calculator Web Application
 """
