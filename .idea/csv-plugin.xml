@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\calor\project\app\filers.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\discuss\project\app\models.py">
           <value>
             <Attribute>

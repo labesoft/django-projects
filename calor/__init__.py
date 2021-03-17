@@ -9,6 +9,8 @@ Package structure
 *calor/project/app/*
     **decorators.py**:
         The auth decorators of The Calorie Calculator Web Application
+    **filters.py**:
+        The search filters of The Calorie Calculator Web Application
     **models.py**:
         The Model of the Calorie Calculator Web Application
 """
