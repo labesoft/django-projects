@@ -9,6 +9,8 @@ Package structure
     **__main__.py**:
         The Main Application of The Discussion Forum
 *discuss/project/app/*
+    **apps.py**:
+        The app config module of Discussion Forum
     **forms.py**:
         The forms of the Discussion Forum Web Application
     **models.py**:
