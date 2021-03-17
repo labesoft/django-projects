@@ -69,6 +69,7 @@ We will use the following technologies:
 
 ## Project Plan
 
+- [ ] Create launch config (init, runserver, test)
 - [ ] Write Models
 - [ ] Write Forms
 - [ ] Write Admin

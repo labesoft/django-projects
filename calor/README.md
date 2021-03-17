@@ -29,6 +29,7 @@ To implement this app we will use :
 
 ## Project Plan
 
+- [ ] Create launch config (init, runserver, test)
 - [ ] Write models
 - [ ] Write Authentication module
 - [ ] Write a search feature
