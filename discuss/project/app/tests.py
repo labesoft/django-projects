@@ -36,8 +36,9 @@ def create_forum(name):
 def create_discussion(name, forum):
     """Utility function to create a Discussion usable for views tests
 
-    :param name:
-    :param forum:
+    :param name: from models.CharField(max_length=1000)
+    :param forum: from models.ForeignKey(Forum, blank=True,
+                    on_delete=models.CASCADE)
     :return: a Discussion object created with all args set to name
     """
     return Discussion.objects.create(forum=forum, discuss=name)

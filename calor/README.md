@@ -1,6 +1,8 @@
 # Calor - A Calorie Calculator Web App
 
 ![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
 
 ”Health is wealth” Obviously, you have heard it a thousand times but as we grow
 older we often realize it’s true and this app provides an interesting way to get
@@ -41,5 +43,5 @@ To implement this app we will use :
 - [x] Write CSS (add some styling)
 - [x] Develop the Templates
 - [ ] Outsource password functionality
-- [ ] Write unit tests
+- [x] Write unit tests
 - [ ] [Deploy to a docker image](https://blog.logrocket.com/dockerizing-a-django-app/)

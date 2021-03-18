@@ -17,6 +17,8 @@ Package structure
         The forms of The Calorie Calculator Web App
     **models.py**:
         The Model of the Calorie Calculator Web Application
+    **tests.py**:
+        The Tests of the Calorie Calculator Web Application
 """
 
 __author__ = "Benoit Lapointe"

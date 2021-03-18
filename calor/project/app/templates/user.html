@@ -15,21 +15,21 @@
     </div>
 
     <div class="card card-body">
-        <table>
+        <table width="100%">
             <tr>
-                <th style="width: 30%;">Food Item</th>
-                <th style="width: 20%;">Calorie</th>
-                <th style="width: 20%;">Carbs</th>
-                <th style="width: 20%;">Fats</th>
-                <th style="width: 20%;">Protein</th>
+                <th width="(100/5)%">Food Item</th>
+                <th width="(100/5)%">Calorie</th>
+                <th width="(100/5)%">Carbs</th>
+                <th width="(100/5)%">Fats</th>
+                <th width="(100/5)%">Protein</th>
             </tr>
             {% for food in foodlist %}
             <tr>
-                <td>{{food.name}}</td>
-                <td> {{food.calorie}}</td>
-                <td> {{food.carbohydrate}}</td>
-                <td> {{food.fats}}</td>
-                <td> {{food.protein}}</td>
+                <td width="(100/5)%">{{food.name}}</td>
+                <td width="(100/5)%"> {{food.calorie}}</td>
+                <td width="(100/5)%"> {{food.carbohydrate}}</td>
+                <td width="(100/5)%"> {{food.fats}}</td>
+                <td width="(100/5)%"> {{food.protein}}</td>
             </tr>
             {% endfor %}
         </table>
