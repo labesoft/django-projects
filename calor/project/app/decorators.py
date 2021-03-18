@@ -41,7 +41,7 @@ def unauthorized_user(view_func):
     return wrapper_func
 
 
-def allowed_users(allowed_roles=[]):
+def allowed_users(allowed_roles=()):
     """Provides the decorator function for late call
 
     :param allowed_roles: roles allowed to view a page
@@ -96,7 +96,7 @@ def admin_only(view_func):
         if request.user.groups.exists():
             group = request.user.groups.all()[0].name
         if group == 'user':
-            return redirect('userPage')
+            return redirect('user_page')
         if group == 'admin':
             return view_func(request, *args, **kwargs)
 

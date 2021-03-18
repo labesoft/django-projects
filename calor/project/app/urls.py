@@ -25,13 +25,13 @@ from app import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('user/', views.userPage, name='userPage'),  # userPage
+    path('user/', views.user_page, name='user_page'),  # user_page
     path('product/', views.fooditem, name='fooditem'),
-    path('createfooditem/', views.createfooditem, name='createfooditem'),
-    path('register/', views.registerPage, name='register'),
-    path('login/', views.loginPage, name='login'),
-    path('logout/', views.logoutUser, name='logout'),
-    path('addFooditem/', views.addFooditem, name='addFooditem'),
+    path('create_fooditem/', views.create_fooditem, name='create_fooditem'),
+    path('register/', views.register_page, name='register'),
+    path('login/', views.login_page, name='login'),
+    path('logout/', views.logout_user, name='logout'),
+    path('add_fooditem/', views.add_fooditem, name='add_fooditem'),
     path(
         'reset_password/',
         auth_views.PasswordResetView.as_view(),

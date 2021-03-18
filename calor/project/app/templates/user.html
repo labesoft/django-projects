@@ -10,18 +10,18 @@
     <h2>Tracker</h2>
     <div class="flex-box-row">
         <h3>Calorie Limit: 2000</h3>
-        <h3>totalCalories consumed: {{totalCalories}}</h3>
-        <h3>Left: {{ CalorieLeft }}</h3>
+        <h3>Total Calories Consumed: {{total_calories}}</h3>
+        <h3>Left: {{ calorie_left }}</h3>
     </div>
 
     <div class="card card-body">
         <table>
             <tr>
-                <th>fooditem</th>
-                <th>Calorie</th>
-                <th>Carbs</th>
-                <th>Fats</th>
-                <th>Protien</th>
+                <th style="width: 30%;">Food Item</th>
+                <th style="width: 20%;">Calorie</th>
+                <th style="width: 20%;">Carbs</th>
+                <th style="width: 20%;">Fats</th>
+                <th style="width: 20%;">Protein</th>
             </tr>
             {% for food in foodlist %}
             <tr>
@@ -34,7 +34,7 @@
             {% endfor %}
         </table>
     </div>
-    <form action="{% url 'addFooditem' %}" method="POST">
+    <form action="{% url 'add_fooditem' %}" method="POST">
         {%csrf_token%}
         <button type="submit" class="btn btn-success">
             <span class="glyphicon glyphicon-plus"></span>
@@ -65,7 +65,7 @@
                     <th>Calorie</th>
                     <th>Carbs</th>
                     <th>Fats</th>
-                    <th>Protien</th>
+                    <th>Protein</th>
                 </tr>
                 {% for food in fooditem %}
                 <tr>

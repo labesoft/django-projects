@@ -17,7 +17,7 @@ from django.contrib import admin
 from .models import *
 
 
-class foodAdmin(admin.ModelAdmin):
+class FoodAdmin(admin.ModelAdmin):
     """The admin of the food model"""
 
     class Meta:
@@ -30,4 +30,4 @@ class foodAdmin(admin.ModelAdmin):
 admin.site.register(Customer)
 admin.site.register(UserFooditem)
 admin.site.register(Category)
-admin.site.register(Fooditem, foodAdmin)
+admin.site.register(Fooditem, FoodAdmin)

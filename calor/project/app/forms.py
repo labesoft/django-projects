@@ -19,7 +19,7 @@ from django.forms import ModelForm
 from .models import *
 
 
-class fooditemForm(ModelForm):
+class FooditemForm(ModelForm):
     """The form for a food item"""
 
     class Meta:
@@ -27,7 +27,7 @@ class fooditemForm(ModelForm):
         fields = "__all__"
 
 
-class addUserFooditem(ModelForm):
+class AddUserFooditem(ModelForm):
     """The form to add food item for a user"""
 
     class Meta:
@@ -35,7 +35,7 @@ class addUserFooditem(ModelForm):
         fields = "__all__"
 
 
-class createUserForm(UserCreationForm):
+class CreateUserForm(UserCreationForm):
     """The form to create a new user"""
 
     class Meta:

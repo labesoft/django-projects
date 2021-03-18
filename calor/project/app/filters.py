@@ -16,7 +16,7 @@ import django_filters
 from .models import *
 
 
-class fooditemFilter(django_filters.FilterSet):
+class FooditemFilter(django_filters.FilterSet):
     """The filter for a food item"""
     class Meta:
         model = Fooditem

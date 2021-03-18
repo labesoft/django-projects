@@ -25,7 +25,7 @@ from django.contrib.auth.models import Group
 from django.shortcuts import render
 
 from .decorators import *
-from .filters import fooditemFilter
+from .filters import FooditemFilter
 from .forms import *
 
 
@@ -84,34 +84,34 @@ def fooditem(request):
 
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['admin'])
-def createfooditem(request):
+def create_fooditem(request):
     """Renders the page with the form to create a food item
 
     :param request: the HTTP request to create a new food item
     :return: if the creation is success, redirect to home page,
                 otherwise stay on the page to correct the form
     """
-    form = fooditemForm()
+    form = FooditemForm()
     if request.method == 'POST':
-        form = fooditemForm(request.POST)
+        form = FooditemForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('/')
     context = {'form': form}
-    return render(request, 'createfooditem.html', context)
+    return render(request, 'create_fooditem.html', context)
 
 
 @unauthorized_user
-def registerPage(request):
+def register_page(request):
     """Renders the page to register a new user
 
     :param request: the HTTP request received register a new user
     :return: if the user registered, redirect to login page,
                 otherwise, stay on the page to correct form
     """
-    form = createUserForm()
+    form = CreateUserForm()
     if request.method == 'POST':
-        form = createUserForm(request.POST)
+        form = CreateUserForm(request.POST)
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
@@ -126,7 +126,7 @@ def registerPage(request):
 
 
 @unauthorized_user
-def loginPage(request):
+def login_page(request):
     """Renders the login page which require both username and password
 
     :param request: the HTTP request received from the user to login
@@ -146,7 +146,7 @@ def loginPage(request):
 
 
 @login_required(login_url='login')
-def logoutUser(request):
+def logout_user(request):
     """Renders the page to logout of the application
 
     :param request: the HTTP request received from the user to logout
@@ -156,7 +156,7 @@ def logoutUser(request):
     return redirect('login')
 
 
-def userPage(request):
+def user_page(request):
     """Renders the user personal page with his food and calorie information
 
     :param request: the HTTP request received for a user page
@@ -165,7 +165,7 @@ def userPage(request):
     user = request.user
     cust = user.customer
     fooditems = Fooditem.objects.filter()
-    myfilter = fooditemFilter(request.GET, queryset=fooditems)
+    myfilter = FooditemFilter(request.GET, queryset=fooditems)
     fooditems = myfilter.qs
     total = UserFooditem.objects.all()
     myfooditems = total.filter(customer=cust)
@@ -187,7 +187,7 @@ def userPage(request):
     return render(request, 'user.html', context)
 
 
-def addFooditem(request):
+def add_fooditem(request):
     """Renders food item at the user's page
 
     :param request: the HTTP request received from the user to add his fooditem
@@ -198,10 +198,10 @@ def addFooditem(request):
     cust = user.customer
 
     if request.method == "POST":
-        form = addUserFooditem(request.POST)
+        form = AddUserFooditem(request.POST)
         if form.is_valid():
             form.save()
             return redirect('/')
-    form = addUserFooditem()
+    form = AddUserFooditem()
     context = {'form': form}
-    return render(request, 'addUserFooditem.html', context)
+    return render(request, 'add_user_fooditem.html', context)

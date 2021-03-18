@@ -2,13 +2,13 @@
 {% load static%}
 
 {% block content %}
-<div class="flex-box-row">
+<div class="flex-box-col">
     <br>
     <br>
-    <h5 id="heading">Breakfast</h5>
-    <h6>Total options:{{bcnt}}</h6>
+    <h5 class="heading">Breakfast</h5>
+    <h6 align="right">Total options:{{bcnt}}</h6>
     <a class="btn btn-primary  btn-sm btn-block"
-       href="{% url 'createfooditem' %}">Add more options</a>
+       href="{% url 'create_fooditem' %}">Add more options</a>
     <table class="table table-sm">
         <tr>
             <th>Name</th>
@@ -32,12 +32,12 @@
 </div>
 <br>
 <!---------------------------->
-<div class="flex-box-row">
-    <h5 id="heading">Lunch</h5>
-    <h6>Total options:{{lcnt}}</h6>
+<div class="flex-box-col">
+    <h5 class="heading" align="center">Lunch</h5>
+    <h6 align="right">Total options:{{lcnt}}</h6>
 
     <a class="btn btn-primary  btn-sm btn-block"
-       href="{% url 'createfooditem' %}">Add more options</a>
+       href="{% url 'create_fooditem' %}">Add more options</a>
     <table class="table table-sm">
         <tr>
             <th>Name</th>
@@ -62,11 +62,11 @@
 </div>
 <br>
 <!------------------------------------------->
-<div class="flex-box-row">
-    <h5 id="heading">Snacks</h5>
-    <h6>Total options:{{scnt}}</h6>
+<div class="flex-box-col">
+    <h5 class="heading" align="center">Snacks</h5>
+    <h6 align="right">Total options:{{scnt}}</h6>
     <a class="btn btn-primary  btn-sm btn-block"
-       href="{% url 'createfooditem' %}">Add more options</a>
+       href="{% url 'create_fooditem' %}">Add more options</a>
     <table class="table table-sm">
         <tr>
             <th>Name</th>
@@ -90,11 +90,11 @@
 </div>
 <br>
 <!-------------------------------------->
-<div class="flex-box-row">
-    <h5 id="heading">Dinner</h5>
-    <h6>Total options:{{dcnt}}</h6>
+<div class="flex-box-col">
+    <h5 class="heading" align="center">Dinner</h5>
+    <h6 align="right">Total options:{{dcnt}}</h6>
     <a class="btn btn-primary  btn-sm btn-block"
-       href="{% url 'createfooditem' %}">Add more options</a>
+       href="{% url 'create_fooditem' %}">Add more options</a>
     <table class="table table-sm">
         <tr>
             <th>Name</th>
