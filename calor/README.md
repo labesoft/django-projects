@@ -32,14 +32,14 @@ To implement this app we will use :
 
 - [x] Create launch config (init, runserver, test)
 - [x] Write models
-- [ ] Write Authentication module
-- [ ] Write a search feature
-- [ ] Create and update the models
-- [ ] Admin the site, update the models
-- [ ] Configure urls
-- [ ] Setup the views
-- [ ] Write CSS (add some styling)
-- [ ] Develop the Templates
+- [x] Write Authentication module
+- [x] Write a search feature
+- [x] Create and update the models
+- [x] Admin the site, update the models
+- [x] Configure urls
+- [x] Setup the views
+- [x] Write CSS (add some styling)
+- [x] Develop the Templates
 - [ ] Outsource password functionality
 - [ ] Write unit tests
 - [ ] [Deploy to a docker image](https://blog.logrocket.com/dockerizing-a-django-app/)
