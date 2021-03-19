@@ -1,4 +1,4 @@
-# Calor - A Calorie Calculator Web App
+# Calor: The Calorie Calculator
 
 ![img.png](img.png)
 ![img_1.png](img_1.png)
