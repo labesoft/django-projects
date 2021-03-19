@@ -1,4 +1,4 @@
-# jopro - The Online Job Portal Web App
+# Jopro - The Online Job Portal
 
 ![img.png](img.png)
 

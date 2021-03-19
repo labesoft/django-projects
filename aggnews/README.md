@@ -1,4 +1,4 @@
-# The Aggregator News
+# Aggnews - The News Aggregator
 
 ![img.png](img.png)
 

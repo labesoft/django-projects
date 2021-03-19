@@ -1,4 +1,4 @@
-# Discuss - A Discussion Forum Web App
+# Discuss - The Discussion Forum
 
 ![image](https://user-images.githubusercontent.com/11091581/111494627-0271af80-8715-11eb-87ec-7a26ef394ee3.png)
 
