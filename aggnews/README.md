@@ -51,10 +51,10 @@ Django Tutorials](https://data-flair.training/blogs/django-tutorials-home/)
 
 Here are the steps to follow to build this Web App:
 
-- [ ] Create launch config (init, runserver, test)
-- [ ] Install bs4 and requests libraries
-- [ ] Create the Django Project
-- [ ] Write the models
-- [ ] Write the templates
-- [ ] Configuring urls
-- [ ] Write unit tests
+- [x] Create launch config (init, runserver, test)
+- [x] Install bs4 and requests libraries
+- [x] Create the Django Project
+- [x] Write the models
+- [x] Write the templates
+- [x] Configuring urls
+- [x] Write unit tests
