@@ -13,13 +13,12 @@ The goal of this module is to test the models.
 """
 
 __author__ = "Benoit Lapointe"
-__date__   = "2021-03-23"
+__date__ = "2021-03-23"
 __copyright__ = "Copyright 2021, labesoft"
 __version__ = "1.0.0"
 
-from django.test import TestCase
-
 from app.models import Headline
+from django.test import TestCase
 
 
 def create_headline(name):
@@ -39,6 +38,7 @@ def create_headline(name):
 
 class TestModels(TestCase):
     """Testing the models of Aggregator News"""
+
     def test_headline___str__(self):
         """Test is the str call returns the title"""
         # Prepare test
