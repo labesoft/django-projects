@@ -6,6 +6,11 @@ Package structure
 *aggnews/*
     **__init__.py**:
         The package of Aggregate News
+*aggnews/project/app/*
+    **models.py**:
+        The Models of The News Aggregator Web App
+    **views.py**:
+        The Views of the News Aggregator Web App
 """
 
 __author__ = "Benoit Lapointe"
