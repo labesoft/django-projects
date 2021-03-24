@@ -7,10 +7,12 @@ Package structure
     **__init__.py**:
         The package of the Online Job Portal
 *jopro/project/app/*
-    **models.py**:
-        The models of the Job Portal Web Application
+    **admin.py**:
+        The administration of the Job Portal Web Application
     **forms.py**:
         The forms of the Job Portal Web Application
+    **models.py**:
+        The models of the Job Portal Web Application
 """
 
 __author__ = "Benoit Lapointe"
