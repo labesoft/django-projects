@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="aggnews runserver" type="PythonConfigurationType" factoryName="Python" folderName="aggnews">
+  <configuration default="false" name="1. aggnews makemigrations" type="PythonConfigurationType" factoryName="Python" folderName="aggnews">
     <module name="django-projects" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
@@ -12,7 +12,7 @@
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <option name="SCRIPT_NAME" value="aggnews.project.manage" />
-    <option name="PARAMETERS" value="runserver" />
+    <option name="PARAMETERS" value="makemigrations" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
     <option name="MODULE_MODE" value="true" />

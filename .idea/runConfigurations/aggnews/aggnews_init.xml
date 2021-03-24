@@ -1,8 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="aggnews init" type="CompoundRunConfigurationType">
-    <toRun name="1. aggnews migrate" type="PythonConfigurationType" />
-    <toRun name="2. aggnews makemigrations" type="PythonConfigurationType" />
-    <toRun name="3. aggnews createsuperuser" type="PythonConfigurationType" />
+    <toRun name="1. aggnews makemigrations" type="PythonConfigurationType" />
+    <toRun name="2. aggnews migrate" type="PythonConfigurationType" />
     <method v="2" />
   </configuration>
 </component>

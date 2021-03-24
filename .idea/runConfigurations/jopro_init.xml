@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="jopro init" type="CompoundRunConfigurationType">
+    <toRun name="1. jopro makemigrations" type="PythonConfigurationType" />
+    <toRun name="2. jopro migrate" type="PythonConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>

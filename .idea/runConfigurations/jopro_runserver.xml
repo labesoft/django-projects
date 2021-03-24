@@ -1,17 +1,17 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="aggnews runserver" type="PythonConfigurationType" factoryName="Python" folderName="aggnews">
+  <configuration default="false" name="jopro runserver" type="PythonConfigurationType" factoryName="Python" folderName="jopro">
     <module name="django-projects" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
     <envs>
       <env name="PYTHONUNBUFFERED" value="1" />
     </envs>
-    <option name="SDK_HOME" value="C:\Users\bened\anaconda3\envs\aggnews\python.exe" />
-    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/aggnews/project" />
+    <option name="SDK_HOME" value="C:\Users\bened\anaconda3\envs\jopro\python.exe" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jopro/project" />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
-    <option name="SCRIPT_NAME" value="aggnews.project.manage" />
+    <option name="SCRIPT_NAME" value="jopro.project.manage" />
     <option name="PARAMETERS" value="runserver" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
