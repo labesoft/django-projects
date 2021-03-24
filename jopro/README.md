@@ -71,7 +71,7 @@ We will use the following technologies:
 
 - [x] Create launch config (init, runserver, test)
 - [x] Write Models
-- [ ] Write Forms
+- [x] Write Forms
 - [ ] Write Admin
 - [ ] Write Settings
 - [ ] Write urls

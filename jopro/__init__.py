@@ -9,6 +9,8 @@ Package structure
 *jopro/project/app/*
     **models.py**:
         The models of the Job Portal Web Application
+    **forms.py**:
+        The forms of the Job Portal Web Application
 """
 
 __author__ = "Benoit Lapointe"
