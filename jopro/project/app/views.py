@@ -13,7 +13,6 @@ __copyright__ = "Copyright 2021, labesoft"
 __version__ = "1.0.0"
 
 from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
 from .forms import *
@@ -21,16 +20,21 @@ from .forms import *
 
 def home(request):
     if request.user.is_authenticated:
-        candidates = Candidates.objects.filter(
-            company__name=request.user.username)
+        candidates = Candidate.objects.filter(
+            job__company__name=request.user.username
+        ).order_by("job__position")
+        offers = JobOffer.objects.filter(
+            company__name=request.user.username
+        ).order_by("position")
         context = {
-            'candidates': candidates,
+            'offers': offers,
+            'candidates': candidates
         }
-        return render(request, 'hr.html', context)
+        return render(request, 'Hr.html', context)
     else:
-        companies = Company.objects.all()
+        offers = JobOffer.objects.all()
         context = {
-            'companies': companies,
+            'offers': offers,
         }
         return render(request, 'Jobseeker.html', context)
 
@@ -59,18 +63,37 @@ def registerUser(request):
     if request.user.is_authenticated:
         return redirect('home')
     else:
-        Form = UserCreationForm()
+        form = UserCreationForm()
         if request.method == 'POST':
-            Form = UserCreationForm(request.POST)
+            form = UserCreationForm(request.POST)
 
-            if Form.is_valid():
-                currUser = Form.save()
+            if form.is_valid():
+                currUser = form.save()
                 Company.objects.create(user=currUser, name=currUser.username)
                 return redirect('login')
         context = {
-            'form': Form
+            'form': form
         }
         return render(request, 'register.html', context)
+
+
+def job_offer(request):
+    if not request.user.is_authenticated:
+        return redirect('home')
+    else:
+        form = JobOfferForm()
+        if request.method == 'POST':
+            form = JobOfferForm(request.POST)
+
+            if form.is_valid():
+                joboffer = form.save(commit=False)
+                joboffer.company = Company.objects.get(name=request.user.username)
+                form.save()
+                return redirect('home')
+        context = {
+            'form': form
+        }
+        return render(request, 'joboffer.html', context)
 
 
 def applyPage(request):

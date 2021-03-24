@@ -12,12 +12,19 @@ __date__ = "2021-03-24"
 __copyright__ = "Copyright 2021, labesoft"
 __version__ = "1.0.0"
 
-from django.forms import ModelForm
+from django.contrib.auth.forms import UserCreationForm
+from django.forms import ModelForm, CharField, IntegerField
 
 from .models import *
 
 
 class ApplyForm(ModelForm):
     class Meta:
-        model = Candidates
+        model = Candidate
         fields = "__all__"
+
+
+class JobOfferForm(ModelForm):
+    class Meta:
+        model = JobOffer
+        fields = ('position', 'description', 'salary', 'experience', 'location')

@@ -20,5 +20,6 @@ urlpatterns = [
     path('login/', loginUser, name='login'),
     path('logout/', logoutUser, name='logout'),
     path('register/', registerUser, name='register'),
+    path('joboffer/', job_offer, name='joboffer'),
     path('apply/', applyPage, name='apply'),
 ]
