@@ -73,7 +73,7 @@ We will use the following technologies:
 - [x] Write Models
 - [x] Write Forms
 - [x] Write Admin
-- [ ] Write Settings
+- [x] Write Settings
 - [ ] Write urls
 - [ ] Write views
 - [ ] Write templates
