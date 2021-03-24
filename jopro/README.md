@@ -74,7 +74,7 @@ We will use the following technologies:
 - [x] Write Forms
 - [x] Write Admin
 - [x] Write Settings
-- [ ] Write urls
-- [ ] Write views
+- [x] Write urls
+- [x] Write views
 - [ ] Write templates
 - [ ] Write unit tests
