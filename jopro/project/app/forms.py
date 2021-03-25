@@ -12,8 +12,7 @@ __date__ = "2021-03-24"
 __copyright__ = "Copyright 2021, labesoft"
 __version__ = "1.0.0"
 
-from django.contrib.auth.forms import UserCreationForm
-from django.forms import ModelForm, CharField, IntegerField
+from django.forms import ModelForm
 
 from .models import *
 

@@ -17,9 +17,9 @@ from .views import *
 
 urlpatterns = [
     path('', home, name='home'),
-    path('login/', loginUser, name='login'),
-    path('logout/', logoutUser, name='logout'),
-    path('register/', registerUser, name='register'),
-    path('joboffer/', job_offer, name='joboffer'),
-    path('apply/', applyPage, name='apply'),
+    path('login/', site_login, name='login'),
+    path('logout/', site_logout, name='logout'),
+    path('register/', register, name='register'),
+    path('job-offer/', job_offer, name='job-offer'),
+    path('apply/', apply, name='apply'),
 ]

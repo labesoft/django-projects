@@ -7,14 +7,13 @@ The goal of this module is test the models of the jopro Job Portal webapp.
 """
 
 __author__ = "Benoit Lapointe"
-__date__   = "2021-03-25"
+__date__ = "2021-03-25"
 __copyright__ = "Copyright 2021, labesoft"
 __version__ = "1.0.0"
 
+from app.models import Company, JobOffer, Candidate
 from django.contrib.auth.models import User
 from django.test import TestCase
-
-from app.models import Company, JobOffer, Candidate
 from django.utils import timezone
 
 

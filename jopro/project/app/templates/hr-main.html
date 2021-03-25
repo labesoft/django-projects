@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container card">
-    <h1>Candidates applied</h1>
+    <h1 align="center">{{ request.user }} jobs candidates</h1>
     {% for o in offers %}
     <h3>{{ o.position }}</h3>
     <div class="card-body">
@@ -35,7 +35,7 @@
         </table>
     </div>
     {% endfor %}
-    <a class="btn btn-primary" href="{% url 'joboffer' %}">New Job Offer</a>
+    <a class="btn btn-primary" href="{% url 'job-offer' %}">New Job Offer</a>
 </div>
 
 {% endblock %}
