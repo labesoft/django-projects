@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+{% load static%}
+
+{% block content %}
+<div class="container card">
+    <h1 align="center">Available openings</h1>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Description</th>
+                <th>Salary</th>
+                <th>Experience</th>
+                <th>Location</th>
+                <th>Join</th>
+            </tr>
+            {% for o in offers %}
+            <tr>
+                <td>{{o.company.name}}</td>
+                <td>{{o.position}}</td>
+                <td>{{o.description}}</td>
+                <td>{{o.salary}}</td>
+                <td>{{o.experience}}</td>
+                <td>{{o.location}}</td>
+                <td><a href="{% url 'apply' %}" class="btn btn-info btn-sm"
+                       type="submit">Apply</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% endblock %}

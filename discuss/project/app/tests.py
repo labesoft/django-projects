@@ -46,7 +46,7 @@ def create_discussion(name, forum):
 
 class TestModels(TestCase):
     def test_forum___str__(self):
-        """Forum string representation"""
+        """Test Forum string representation"""
         # Prepare test
         forum = create_forum(name=self._testMethodName)
 
@@ -57,7 +57,7 @@ class TestModels(TestCase):
         self.assertEqual(forum.topic, forum_str)
 
     def test_discussion___str__(self):
-        """Discussion string representation"""
+        """Test Discussion string representation"""
         # Prepare test
         forum = create_forum(self._testMethodName)
         discuss = create_discussion(self._testMethodName, forum)
