@@ -13,6 +13,8 @@ Package structure
         The forms of the Job Portal Web Application
     **models.py**:
         The models of the Job Portal Web Application
+    **tests.py**:
+        The tests of the Job Portal Web Application
     **urls.py**:
         The urls of app side of the Job Portal web application
     **views.py**:

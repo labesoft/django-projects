@@ -9,4 +9,4 @@ There is no better way to learn Django or any other framework than by working on
 - [x] [Calor - The Calorie Calculator](calor)
 - [x] [Discuss - The Discussion Forum](discuss)
 - [x] [Aggnews - The News Aggregator](aggnews)
-- [ ] [Jopro - The Online Job Portal](jopro)
+- [x] [Jopro - The Online Job Portal](jopro)
