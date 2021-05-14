@@ -1,6 +1,6 @@
 # Mastering Django with simple projects
 
-Learning the concept of Python and Django is a great experience. But only theoretical learning is not enough, but working on some real-time projects would help integrating all of our concepts, we now need project ideas.
+Mastering the concept of Python and Django is a great experience. This goal of this page is to show about our abilities with django. These few projects show about what we could do on some real-time projects and what we have done so far to integrate all of our concepts.
 
 There is no better way to master Django or any other framework than by working on some real-world projects. These projects presents our real-world experience and make us ready to deliver great products in the future.
 
