@@ -44,8 +44,8 @@ We needed to have these libraries:
 - BeautifulSoup
 - Requests module
 
-Django is an absolute necessity here and for mastering we referred
-to [40+ Django Tutorials](https://data-flair.training/blogs/django-tutorials-home/)
+Django is an absolute necessity here and for mastering this project we integrated
+the web crawler in our views and models
 
 ## Project Plan
 
